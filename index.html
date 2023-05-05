@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CGPA by GMC</title>
+    </head>
+    <body>
+        <div id="vth" style="position: fixed; left: 40%;">
+    <h1>Vth Semester</h1>
+       
+        <!--user inp for subj grade-->
+        <div id="usr-grd">
+        <input id="ssu1" type="tel" placeholder="Operating System"><br><br>
+        <input id="ssu2" type="tel" placeholder="Computer Networks"><br><br>
+        <input id="ssu3" type="tel" placeholder="System Software"><br><br>
+        <input id="ssu4" type="tel" placeholder="Elective"><br><br>
+        <input id="ssu5" type="tel" placeholder="open Elective"><br><br>
+        <input id="ssu6" type="tel" placeholder="cn lab"><br><br>
+        <input id="ssu7" type="tel" placeholder="os lab"><br><br>
+        <input id="ssu8" type="tel" placeholder="techskill"><br><br>
+        <input id="ssu9" type="tel" placeholder="ss lab"><br><br>
+        <input id="ssu10" type="tel" placeholder="Cg"><br><br>
+        <button onclick="duu()">CALCULATE</button>
+    </div>
+    <div>
+
+<input hidden id="ree1"> <br><br>   
+<input hidden id="ree2">    <br><br>
+<input hidden id="ree3">    <br><br>
+<input hidden id="ree4">    <br><br>
+<input hidden id="ree5">    <br><br>
+<input hidden id="ree6">    <br><br>
+<input hidden id="ree7">    <br><br>
+<input hidden id="ree8">    <br><br>
+<input hidden id="ree9">    <br><br>
+<input hidden id="ree10"><br><br><br><br><br><br><br><br><br><br>
+
+<input id="final" hidden><br><br>
+<input id="firee" hidden>
+<input style=" position: fixed; left: 48%; top: 61%;" id="finale">
+</div></div>
+
+<h1>Made By GMC</h1>
+
+<div style="position: fixed; top: 35%;" id="IVth sem">
+    
+    <h1>IVth Semester</h1>
+<input type="number" id="fourth" placeholder="IVth Semester CGPA"><br><br>
+<button onclick="calc()">CLICK</button>
+<input type="number" id="totpoints">
+</div>
+
+
+<div id="overall" style="position: fixed; right: 5%;">
+    <h1>OVERALL CGPA</h1>
+    <input id="sum" placeholder="overall cgpa">
+    <button onclick="total()" id="ova">CHECK</button>
+    
+    <input id="priya" placeholder="Final Score">
+</div>
+
+
+
+
+
+
+
+    <script>
+        function total() {
+
+fourth = document.getElementById("totpoints").value;
+fifth = document.getElementById("finale").value;
+
+            document.getElementById("sum").value = fourth*1+fifth*1;
+
+   manu = document.getElementById("sum").value;
+
+   
+   document.getElementById("priya").value = manu/102;
+        }
+function duu() {
+
+
+
+
+     os1 = document.getElementById("ssu1").value;
+     cn1 = document.getElementById("ssu2").value;
+     ss1 = document.getElementById("ssu3").value;
+     elc1 = document.getElementById("ssu4").value;
+     oe1 = document.getElementById("ssu5").value;
+     cnl1 = document.getElementById("ssu6").value;
+     osl1 = document.getElementById("ssu7").value;
+     ts1 = document.getElementById("ssu8").value;
+     ssl1 = document.getElementById("ssu9").value;
+     cg1 = document.getElementById("ssu10").value;
+
+  
+   
+   
+   
+
+
+    
+   document.getElementById("final").value = os1*3+cn1*3+ss1*3+elc1*3+oe1*3+cnl1*1+osl1*1;
+   
+   
+   k = document.getElementById("ree8").value = ts1*1;
+   t = document.getElementById("ree9").value = ssl1*1;
+   m = document.getElementById("ree10").value = cg1*3;
+
+   document.getElementById("firee").value = k+t+m;
+
+   i = document.getElementById("final").value;
+
+   j = document.getElementById("firee").value;
+
+   document.getElementById("finale").value = i*1+j*1;
+
+}
+
+function calc() {
+    fort = document.getElementById("fourth").value;
+    res  = document.getElementById("totpoints").value;
+
+   document.getElementById("totpoints").value = fort*80;
+
+}
+    </script>
+    </body>
+</html>
